@@ -1,0 +1,124 @@
+@use '../../styles/_variables' as *
+@use '../../styles/_mixins' as *
+
+.main-welcome
+  background-image: url("../../assets/images/wallpaper1.png")
+  background-size: cover
+  height: auto
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: scroll
+
+.containerWelcome
+  width: 390px
+  height: 674px
+  background: white
+  border-top-left-radius: 73px
+  border-top-right-radius: 73px
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: 260px
+  margin-left: 2px
+  
+
+  /* &__subtitle
+    font-size: 24px
+    font-style: normal
+    text-align: center
+    font-weight: 500
+    line-height: 87.741% /* 21.058px */
+  
+
+.container-rols
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  gap: 16px
+  color: $primary-color
+  font-weight: $bold-weight
+  font-size: 5px
+  margin-top: 75px
+
+  
+  &__div
+    display: grid
+    justify-items: center
+    width: 250px
+    height: 150px
+    margin-top: 10px
+    margin-bottom: 70px
+    margin-right: 80px
+    align-content: auto
+    
+    &--admin
+      border: 4px solid red
+      @include buttonStyleHome()
+      
+        
+    &--img
+        width: 100px
+        height: 100px
+        margin-top: 10px
+      
+  
+    &--user
+      background: rgba($light-color, 0.3)
+      border-radius: 90px
+      height: 40%
+      width: 100%
+      border: 2px solid $tertiary-color
+      margin-top: 10px
+
+
+  
+ 
+.rol
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  
+  
+  p
+    font-size: 1.0rem
+    font-style: normal
+    line-height: 87.741% /* 14.039px */
+    letter-spacing: 0.64px
+    text-align: center
+    color: $tertiary-text-color
+    padding: 10px
+
+.footerText
+    text-align: center
+    margin-top: 280px
+    width: 270px
+    margin-bottom: 0px
+    font-size: 15px
+    
+.container-rols__div--img
+  width: 120px /* Ajusta el ancho según sea necesario */
+  height: 120px /* Ajusta la altura según sea necesario */
+
+.welcomeTitle
+  font-size: 20px
+  font-weight: 20px
+
+.pd 
+  font-size: 14px
+  margin-top: 10px
+  margin-bottom: 10px
+  text-align: center
+  color: $secondary-text-color
+  margin-top: 20px
+.buttonAdmin
+  @include buttonStyleHome()
+  
+
+.buttonUser
+  @include buttonStyleHome()
+  margin-top: 20px

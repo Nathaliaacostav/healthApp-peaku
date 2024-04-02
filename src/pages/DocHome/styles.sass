@@ -1,0 +1,83 @@
+@use '../../styles/_variables' as *
+@use '../../styles/_mixins' as *
+
+.docHome
+ background-image: url("https://res.cloudinary.com/dhhyc88td/image/upload/v1711516031/wallpaper1_fcmfxf.png")
+ background-size: cover
+ height: 100vh
+ width: 390px
+ display: flex
+ flex-direction: column 
+ justify-content: center
+ align-items: center
+
+
+.containerD
+  width: 394px
+  height: 774px
+  background: white
+  border-top-left-radius: 73px
+  border-top-right-radius: 73px
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: 155px
+
+.containerDoctor
+  width: 394px
+  height: 674px
+  margin-top: 20px
+  margin-left: 15px
+
+ 
+
+  &__docHomeTitle
+    @include titleH1()
+    align-self: flex-start
+    margin-bottom: 30px
+    margin-left: 120px
+    margin-top: 80px
+    margin-bottom: 40px
+
+  &__contentPatient
+    display: flex
+    width: 350px
+    height: 110px
+    align-items: flex-start
+    margin-bottom: 20px
+    background: $input-color
+    border: 2px solid $tertiary-color
+    border-radius: 20px
+    margin-left: 15px
+    margin-top: 30px
+  
+
+    &__description
+      display: flex
+      flex-direction: column
+      margin-left: 20px
+      padding-top: 10px
+
+      &-patientTitle
+        font-size: 20px
+        font-weight: $bold-weight
+        color: $secondary-text-color
+        margin-bottom: 5px
+
+      &-patientData
+        font-size: 15px
+
+.patientImg
+ width: 90px
+ height: 90px
+ padding: 0px
+ margin-right: 0
+ margin-left: auto 
+ padding-top: 10px      
+
+.docHomeTitle
+  @include titleH1()
+  margin-left: 20px
+  padding-top: 90px
+  color: white
+  text-align: center

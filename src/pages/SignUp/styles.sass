@@ -1,0 +1,55 @@
+@use '../../styles/_variables' as *
+@use '../../styles/_mixins' as *
+
+
+.main-signUp
+  background-image: url("https://res.cloudinary.com/dhhyc88td/image/upload/v1711516031/wallpaper1_fcmfxf.png")
+  background-size: cover
+  height: 700px // Ajustamos la altura para que se adapte al dispositivo
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+.sign-up
+  width: 390px
+  height: 750px// Cambia a auto para que la altura se ajuste según el contenido
+  background: white
+  border-top-left-radius: 73px
+  border-top-right-radius: 73px
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-left: 2px
+  margin-top: 400px
+
+
+  h1
+    @include titleH1()
+    padding-top: 20px
+    margin-top: 70px
+    margin-bottom: 20px
+
+      
+
+  .form__buttons-container
+    display: flex
+    flex-direction: column
+    gap: 30px // Ajusta el espacio entre los botones
+    margin-top: 50px
+    margin-left: 25px
+    
+    
+    button
+      width: 100% // Ajusta el ancho de los botones para que ocupen todo el contenedor
+      @include buttonStyleHome()
+      margin-right: 22px
+
+.smaller
+  color: $tertiary-text-color
+  font-weight: $regular-weight
+  font-size: 18px
+  text-align: center
+  margin-right: 50px
+  margin-left: 50px
+  margin-top: 40px

@@ -1,0 +1,173 @@
+@use './_variables' as *
+
+@mixin flexCenter($direction, $justify, $align, $gap)
+  display: flex
+  flex-direction: $direction
+  justify-content: $justify
+  align-items: $align
+  gap: $gap
+
+@mixin labelStyle()
+  font-size: 1rem
+  color: $secondary-text-color
+  text-align: left
+  margin-left: 12px
+  margin-bottom: -30px
+  
+
+@mixin inputWrapper()
+  width: 90%
+  height: 56px
+  border-radius: 250px
+  display: flex
+  gap: 10px
+  align-items: center
+  background-color: rgba($tertiary-color, 0.37)
+  padding: 0 20px
+  margin-left: -9px
+
+@mixin inputStyle()
+  width: 250px
+  height: 100%
+  padding: 0px
+  margin-top: 5px
+  margin-bottom: 0px
+  background-color: transparent
+  font-size: 1.6rem
+  border: none
+  &::placeholder
+    color: rgba($primary-text-color, 0.37)
+  &:focus
+    outline: none
+
+@mixin iconStyle($font-size, $color)
+  font-size: $font-size
+  color: $color
+
+@mixin buttonStyle()
+  width: 172px
+  height: 35px
+  border-radius: 20px
+  background-color: $light-color
+  border: 2px solid $tertiary-color
+  text-align: center
+  font: $secondary-font
+  font-size: 16px
+  font-weight: $regular-weight
+  color: $tertiary-text-color
+
+@mixin buttonStyle2()
+  width: 330px
+  height: 55px
+  border-radius: 40px
+  background-color: $light-color
+  border: 3px solid $tertiary-color
+  text-align: center
+  font: $secondary-font
+  font-size: 26px
+  font-weight: $regular-weight
+  color: $tertiary-text-color
+  padding-bottom: 40px
+  padding-top: 7px
+
+
+@mixin profileContent($userinfo-color)
+  position: absolute
+  z-index: 3
+  top: 15px
+  right: 20px
+  text-align: right
+  color: $userinfo-color
+  display: grid
+  grid-template-rows: 70px 30px 20px
+  align-items: center
+  &--title
+    font-size: 3.6rem
+    font-weight: $extrabold-weight
+  &--text
+    font-size: 2rem
+    font-weight: $medium-weight
+  &--span
+    font-size: 1.3rem
+    font-weight: $medium-weight
+
+@mixin profilePictureStyles()
+  width: 92px
+  height: 92px
+  background-color: $tertiary-color
+  position: absolute
+  z-index: 6
+  top: 15px
+  left: 15px
+  display: grid
+  place-content: center
+  border-radius: 50%
+  img
+    width: 82px
+    height: 82px
+    border-radius: 50%
+  
+@mixin titleBrand()
+  font-size: 70px
+  font-family: $font-source
+  color: $primary-text-color
+
+@mixin subtitleBrand()
+  font-size: 32px
+  font-family: $font-source
+  color: $tertiary-text-color
+
+@mixin titleH1()
+  font-size: 35px
+  font-family: $font-source
+  color: $primary-text-color
+
+@mixin subtitleH3()
+  font-size: 23px
+  font-family: $font-source
+  color: $primary-text-color
+
+
+@mixin paragraph()
+  font-size: 23px
+  font-family: Poppins
+  color: $tertiary-text-color
+
+@mixin paragraph2()
+  font-size: 23px
+  font-family: $font-source
+  color: $primary-text-color
+
+@mixin paragraph3()
+  font-size: 15px
+  font-family: $font-source
+  color: $secondary-text-color
+
+@mixin warning()
+  font-size: 18px
+  font-family: Poppins
+  color: $secondary-text-color
+
+@mixin priceNumbers()
+  font-size: 50px
+  font-family: $font-source
+  color: $secondary-text-color
+
+@mixin buttonStyleHome()
+  width: 330px
+  height: 55px
+  background: $light-color
+  border-radius: 40px
+  text-align: center
+  border: 3px solid $tertiary-color
+  color: $tertiary-text-color
+  font-family: Arial, sans-serif
+  font-size: 26px
+
+@mixn buttonStyleSecondary()
+  background: $light-color
+  color: $tertiary-text-color
+  font-family: Arial, sans-serif
+  font-size: 16px
+  width: 172px
+  height: 35px
