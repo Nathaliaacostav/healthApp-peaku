@@ -31,7 +31,7 @@ const FileUpload = () => {
         <button className="fileUpload__backButton" onClick={() => navigate('/Home')}>
         <IoIosArrowBack />
         </button>
-        <h3 className="fileUpload__pageDescription">Toma de fotografías</h3>
+        <h3 className="fileUpload__pageDescription">Carga de archivo</h3>
         <button className="fileUpload__fi-more">
           <FiMoreVertical />
         </button>

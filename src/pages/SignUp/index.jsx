@@ -25,72 +25,8 @@ const SignUp = () => {
     }
 
     dispatch(createAnAccountAsync(userData))
+    navigate('/sign-in');
   }
-
-
-
-
-  /* const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    gender: '',
-    password: '',
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
- */
-  /* const handleSubmit = async (e) => {
-    e.preventDefault();
-    //verifica si hay campos vacíos
-    if (!formData.name || !formData.email || !formData.password) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Por favor completa todos los campos.',
-      });
-      return;
-    }
-    try {
-      const { user } = await createUserWithEmailAndPassword(
-        auth,
-        formData.email,
-        formData.password
-      );
-      console.log('Usuario creado:', user);
-
-
-       // Guardar información adicional del usuario en Firestore
-    await addDoc(collection(user, 'users'), {
-      uid: user.uid,
-      name: formData.name,
-      email: formData.email,
-      gender: formData.gender,
-      // Otros campos adicionales del usuario que desees almacenar
-    });
-
-      // Mostrar alerta de éxito
-      Swal.fire({
-        icon: 'success',
-        title: 'Registro exitoso!',
-        text: 'Tu cuenta ha sido creada exitosamente.',
-      });
-      // Redirigir al usuario a /sign-in
-      navigate("/sign-in");
-    } catch (error) {
-      console.error('Error al crear usuario:', error);
-      // Mostrar alerta de error
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Hubo un error al crear tu cuenta. Por favor inténtalo de nuevo.',
-      });
-    }
-  }; */
 
   return (
     <main className="main-signUp">

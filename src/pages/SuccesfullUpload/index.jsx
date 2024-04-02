@@ -22,7 +22,7 @@ const SuccesfullUpload = () => {
         </button>
       </div>
       <section className='SuccesfullUpload__container'>
-        <h1 className='SuccesfullUpload__container-title'>¡Gracias por tu pago!</h1>
+        <h1 className='SuccesfullUpload__container-title'>¡Carga exitosa!</h1>
         <div className='SuccesfullUpload__container-check'>
           <img className='checkIcon'src="https://res.cloudinary.com/dhhyc88td/image/upload/v1711314902/garrapata_omqwug.png" alt="" />
         </div>

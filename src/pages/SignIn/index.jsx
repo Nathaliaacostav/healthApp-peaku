@@ -8,19 +8,23 @@ import { FiPhone } from 'react-icons/fi';
 import { FcGoogle } from 'react-icons/fc';
 import Swal from 'sweetalert2';
 import './styles.sass';
+import { auth } from '../../firebase/firebaseConfig';
 
 
 const SignIn = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { error } = useSelector((store) => store.user);
+  const { error} = useSelector((store) => store.user);
   const { register, formState: { errors }, handleSubmit } = useForm();
 
   const handleLoginWithEmailAndPassword = ( userData ) => {
     dispatch(loginWithEmailAndPassword(userData))
+
+
   }
 
   useEffect(() => {
+    console.log(error);
     if (error) {
       Swal.fire({
         title: 'Ooops!',
@@ -28,13 +32,6 @@ const SignIn = () => {
         icon: 'error'
       })
     } 
-    if (error === false) { /** esta pasando derecho sin entrar aca  */
-      Swal.fire({
-        title: `Bienvenido ${user?.name}`,
-        text: 'Has iniciado sesión exitosamente',
-        icon: 'success'
-      })
-    }
   }, [error])
 
   return (

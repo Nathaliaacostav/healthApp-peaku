@@ -22,39 +22,15 @@ import SuccesfullUpload from '../pages/SuccesfullUpload';
 const AppRoutes = () => {
   const {isAuthenticated, user} = useSelector((store) => store.user)
   const dispatch = useDispatch()
-  /* const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [checking, setChecking] = useState(true);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        dispatch(setIsAuthenticated(true));
-        dispatch(
-          setUser({
-            id: user.uid,
-            email: user.email,
-            displayName: user.displayName,
-          })
-        );
-      } else {
-        dispatch(setIsAuthenticated(false));
-        dispatch(setUser(null));
-      }
-      setChecking(false);
-    });
-
-    return () => unsubscribe();
-  }, [dispatch]);  */
+  
 
   return (
       <LoginScreenProvider>
         <Routes>
             <Route element={<PublicRoutes isAuthenticated={isAuthenticated}/>}>
+              <Route path="/welcome" element={<Welcome />} />
               <Route path="/sign-in" element={<SignIn />} />
               <Route path="/sign-up" element={<SignUp />} />
-              <Route path="/welcome" element={<Welcome />} />
               <Route path="/doctor" element={<DocHome />} />
               <Route index element={<Navigate to="/Welcome" />} />
             </Route>

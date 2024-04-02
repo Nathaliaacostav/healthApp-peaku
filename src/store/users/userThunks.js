@@ -3,6 +3,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, up
 import { auth } from '../../firebase/firebaseConfig'
 import { setIsAuthenticated} from './userSlice'
 import { createUserInCollection, getUserFromCollection } from '../services/userServices';
+import Swal from 'sweetalert2';
 
 // Función para registrar un nuevo usuario
 export const createAnAccountAsync = ( newUser ) => async ( dispatch ) => {
@@ -22,6 +23,7 @@ export const createAnAccountAsync = ( newUser ) => async ( dispatch ) => {
       gender: newUser.gender,
       
     })
+    await signOut(auth);
     dispatch(
       setUser({
         id: userLogged.uid,
@@ -30,7 +32,7 @@ export const createAnAccountAsync = ( newUser ) => async ( dispatch ) => {
         accessToken: userLogged.accessToken,
       })
     )
-    dispatch(setIsAuthenticated(true))
+    dispatch(setIsAuthenticated(false))
     dispatch(setError(false))
   } catch (error) {
     console.warn(error)
@@ -53,6 +55,13 @@ export const loginWithEmailAndPassword = ({ email, password }) => async ( dispat
         accessToken: userLogged.accessToken, 
       }))
       console.log(userLogged)
+      console.log(user)
+
+      Swal.fire({
+        title: `Bienvenido ${userLogged?.name}`,
+        text: 'Has iniciado sesión exitosamente',
+        icon: 'success'
+      })
       dispatch(setError(false))
     } else {
       dispatch(setIsAuthenticated(false))
