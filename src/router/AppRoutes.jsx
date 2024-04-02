@@ -32,7 +32,7 @@ const AppRoutes = () => {
               <Route path="/sign-in" element={<SignIn />} />
               <Route path="/sign-up" element={<SignUp />} />
               <Route path="/doctor" element={<DocHome />} />
-              <Route index element={<Navigate to="/Welcome" />} />
+              <Route index element={<Navigate to="/welcome" />} />
             </Route>
             <Route element={<PrivatedRoutes isAuthenticated={isAuthenticated} />}>
               <Route path="/succesfull" element={<SuccesfullUpload />} />
