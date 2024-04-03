@@ -35,7 +35,7 @@ const SuccesfullUpload = () => {
           <img className='shareIcon2' src="https://res.cloudinary.com/dhhyc88td/image/upload/v1711316502/compartir_qpwpmj.png" alt="" />
         </button>
         <div className='SuccesfullUpload__container-btn'>
-          <button className='btnConfirm' onClick={() => navigate('/Home')}>Finalizar</button>
+          <button className='btnConfirm' onClick={() => navigate('/doctor')}>Finalizar</button>
         </div>
               </section>
       <Footer />

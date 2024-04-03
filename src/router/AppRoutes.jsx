@@ -31,12 +31,12 @@ const AppRoutes = () => {
               <Route path="/welcome" element={<Welcome />} />
               <Route path="/sign-in" element={<SignIn />} />
               <Route path="/sign-up" element={<SignUp />} />
-              <Route path="/doctor" element={<DocHome />} />
               <Route index element={<Navigate to="/welcome" />} />
             </Route>
             <Route element={<PrivatedRoutes isAuthenticated={isAuthenticated} />}>
               <Route path="/succesfull" element={<SuccesfullUpload />} />
               <Route path="/file-upload" element={<FileUpload />} />
+              <Route path="/doctor" element={<DocHome />} />
               <Route path="/home" element={<Home />} />
               <Route index element={<Navigate to="/home" />} />
             </Route>
