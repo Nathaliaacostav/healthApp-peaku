@@ -39,13 +39,13 @@ HealthApp es un MVP de aplicativo web, en vista móvil para Iphone 13 & 14 (390x
 Clonar el proyecto
 
 ```bash
-  git clone https://github.com/MAKAIABootcamp/dailycare-project-frontend-6.git
+  git clone https://github.com/Nathaliaacostav/trabajo-final-peaku.git
 ```
 
 Ir a la carpeta raíz
 
 ```bash
-  cd dailycare-project-frontend-6
+  cd trabajo-final-peaku
 ```
 
 Instalar las dependencias del proyecto
